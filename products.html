@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dear Me, Coffee | Products</title>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <img src="images/dearmelogo.png" alt="Dear Me Coffee Logo">
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="feature.html">Features</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <div class="search-bar">
+      <input type="text" id="searchInput" placeholder="Search for products..." onkeyup="searchProducts()">
+    </div>
+
+    <div class="product-grid" id="productGrid">
+    
+      <div class="product-card">
+        <img src="images/caramel.jpg" alt="Caramel Latte">
+        <h3>Caramel Latte</h3>
+        <p class="price">₱150</p>
+        <p>Quantity: 12oz</p>
+        <div class="rating" data-rating="0">
+          <span>☕</span><span>☕</span><span>☕</span><span>☕</span><span>☕</span>
+        </div>
+        <button class="add-cart-btn" onclick="addToCart('Caramel Latte')">Add to Cart</button>
+      </div>
+
+      <div class="product-card">
+        <img src="images/vanilla.jpg" alt="Vanilla Latte">
+        <h3>Vanilla Latte</h3>
+        <p class="price">₱145</p>
+        <p>Quantity: 12oz</p>
+        <div class="rating" data-rating="0">
+          <span>☕</span><span>☕</span><span>☕</span><span>☕</span><span>☕</span>
+        </div>
+        <button class="add-cart-btn" onclick="addToCart('Vanilla Latte')">Add to Cart</button>
+      </div>
+
+      <div class="product-card">
+        <img src="images/mocha.jpg" alt="Mocha">
+        <h3>Mocha</h3>
+        <p class="price">₱160</p>
+        <p>Quantity: 12oz</p>
+        <div class="rating" data-rating="0">
+          <span>☕</span><span>☕</span><span>☕</span><span>☕</span><span>☕</span>
+        </div>
+        <button class="add-cart-btn" onclick="addToCart('Mocha')">Add to Cart</button>
+      </div>
+
+      <div class="product-card">
+        <img src="images/espresso.jpg" alt="Espresso">
+        <h3>Espresso</h3>
+        <p class="price">₱120</p>
+        <p>Quantity: Single Shot</p>
+        <div class="rating" data-rating="0">
+          <span>☕</span><span>☕</span><span>☕</span><span>☕</span><span>☕</span>
+        </div>
+        <button class="add-cart-btn" onclick="addToCart('Espresso')">Add to Cart</button>
+      </div>
+
+      <div class="product-card">
+        <img src="images/cappuccino.jpg" alt="Cappuccino">
+        <h3>Cappuccino</h3>
+        <p class="price">₱155</p>
+        <p>Quantity: 12oz</p>
+        <div class="rating" data-rating="0">
+          <span>☕</span><span>☕</span><span>☕</span><span>☕</span><span>☕</span>
+        </div>
+        <button class="add-cart-btn" onclick="addToCart('Cappuccino')">Add to Cart</button>
+      </div>
+
+      <div class="product-card">
+        <img src="images/flatwhite.jpg" alt="Flat White">
+        <h3>Flat White</h3>
+        <p class="price">₱150</p>
+        <p>Quantity: 12oz</p>
+        <div class="rating" data-rating="0">
+          <span>☕</span><span>☕</span><span>☕</span><span>☕</span><span>☕</span>
+        </div>
+        <button class="add-cart-btn" onclick="addToCart('Flat White')">Add to Cart</button>
+      </div>
+
+      <div class="product-card">
+        <img src="images/garlicbeef.png" alt="Garlic Pepper Beef">
+        <h3>Garlic Pepper Beef</h3>
+        <p class="price">₱220</p>
+        <p>Quantity: 1 serving</p>
+        <div class="rating" data-rating="0">
+          <span>☕</span><span>☕</span><span>☕</span><span>☕</span><span>☕</span>
+        </div>
+        <button class="add-cart-btn" onclick="addToCart('Garlic Pepper Beef')">Add to Cart</button>
+      </div>
+
+      <div class="product-card">
+        <img src="images/burgersteak.jpg" alt="Burger Steak">
+        <h3>Burger Steak</h3>
+        <p class="price">₱200</p>
+        <p>Quantity: 1 serving</p>
+        <div class="rating" data-rating="0">
+          <span>☕</span><span>☕</span><span>☕</span><span>☕</span><span>☕</span>
+        </div>
+        <button class="add-cart-btn" onclick="addToCart('Burger Steak')">Add to Cart</button>
+      </div>
+
+      <div class="product-card">
+        <img src="images/blueberrycake.jpg" alt="Blueberry Cheesecake">
+        <h3>Blueberry Cheesecake</h3>
+        <p class="price">₱180</p>
+        <p>Quantity: Slice</p>
+        <div class="rating" data-rating="0">
+          <span>☕</span><span>☕</span><span>☕</span><span>☕</span><span>☕</span>
+        </div>
+        <button class="add-cart-btn" onclick="addToCart('Blueberry Cheesecake')">Add to Cart</button>
+      </div>
+
+      <div class="product-card">
+        <img src="images/chococookies.jpg" alt="Choco-chip Cookies">
+        <h3>Choco-chip Cookies</h3>
+        <p class="price">₱75</p>
+        <p>Quantity: 2pcs</p>
+        <div class="rating" data-rating="0">
+          <span>☕</span><span>☕</span><span>☕</span><span>☕</span><span>☕</span>
+        </div>
+        <button class="add-cart-btn" onclick="addToCart('Choco-chip Cookies')">Add to Cart</button>
+      </div>
+    </div>
+  </main>
+
+  <script>
+    
+    function searchProducts() {
+      const input = document.getElementById("searchInput").value.toLowerCase();
+      const products = document.querySelectorAll(".product-card");
+
+      products.forEach(product => {
+        const title = product.querySelector("h3").textContent.toLowerCase();
+        product.style.display = title.includes(input) ? "block" : "none";
+      });
+    }
+
+    function addToCart(productName) {
+      alert(productName + " has been added to your cart!");
+    }
+
+    const ratings = document.querySelectorAll(".rating");
+    ratings.forEach(rating => {
+      const beans = rating.querySelectorAll("span");
+      beans.forEach((bean, index) => {
+        bean.addEventListener("click", () => {
+          rating.setAttribute("data-rating", index + 1);
+          beans.forEach((b, i) => {
+            b.classList.toggle("active", i <= index);
+          });
+        });
+      });
+    });
+  </script>
+</body>
+</html>
